@@ -1,0 +1,26 @@
+version: "3.3"
+services:
+    jupyter:
+        build:
+            context: $PATH_TO_PROJECT/docker/poetry-notebook
+            args:
+                - CONTEXT_DIR=.
+        image: poetry-notebook
+        restart: always
+        user: root
+        environment:
+            - GRANT_SUDO=yes
+            - UID=$UID
+            - GID=$GID
+            - GCP_PROJECT=$GCP_PROJECT
+            # - PASSWORD=$JUPYTER_PASSWORD
+            - TZ=Asia/Tokyo
+            - ENV=BASE
+        ports:
+            - $JUPYTER_PORT:8888
+        volumes:
+            - poetry:/home/jovyan/.local
+            - $PATH_TO_PROJECT:/home/jovyan/work
+            - $PATH_TO_DATA:/home/jovyan/work/data
+volumes:
+    poetry: null
