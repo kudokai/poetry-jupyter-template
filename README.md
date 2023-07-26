@@ -12,12 +12,12 @@ sudo apt install git
 
 ```
 cd {WORK_DIR}
-git clone git@github.com:GRI-Inc/poetry-jupyter-template.git
+git clone git@github.com:kudokai/poetry-jupyter-template.git
 ```
 
 ## Dockerのインストール
 
-https://docs.docker.com/engine/install/debian/
+https://docs.docker.com/engine/install/
 インストール後に下記を実行
 
 ```
@@ -27,7 +27,7 @@ sudo reboot # 再起動
 ## envファイルの作成
 
 ```
-cd {WORK_DIR}/scripts
+cd {WORK_DIR}/poetry-jupyter-template/scripts
 ./generate-docker-env.sh
 ```
 
@@ -35,7 +35,7 @@ docker/.envにファイルが作成されるため必ず内容を確認する。
 
 ## コンテナの起動
 ```
-cd {WORK_DIR}/scripts
+cd {WORK_DIR}/poetry-jupyter-template/scripts
 ./start-jupyter.sh
 ```
 8888番ポートでJupyterLabが起動する。
