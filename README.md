@@ -1,5 +1,8 @@
 # Poetry-Jupyter-Templete
 クラウド上でPoetry-JupyterのPython環境を構築するためのテンプレート
+### できること
+- GCP, AWS等のインスタンス上でPoetry環境でのJupyter Notebookを実行可能
+- src以下に作成したモジュールをNotebook上でimport可能
 
 ## gitのインストール
 
@@ -38,6 +41,8 @@ docker/.envにファイルが作成されるため必ず内容を確認する。
 cd {WORK_DIR}/poetry-jupyter-template/scripts
 ./start-jupyter.sh
 ```
+起動成功確認後は、適宜"poetry-jupyter-template"を適当な名前に書き換える。
+
 8888番ポートでJupyterLabが起動する。
 一般公開しないように注意。
 起動して数分はライブラリのインストールのためアクセスできない。
