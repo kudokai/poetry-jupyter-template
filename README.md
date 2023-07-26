@@ -1,5 +1,5 @@
 # Poetry-Jupyter-Templete
-クラウド上でPoetry-Jupyter(+Streamlit)のPython環境を構築するためのテンプレート
+クラウド上でPoetry-JupyterのPython環境を構築するためのテンプレート
 
 ## gitのインストール
 
@@ -12,7 +12,7 @@ sudo apt install git
 
 ```
 cd {WORK_DIR}
-git clone git@github.com:GRI-Inc/jeki-location.git
+git clone git@github.com:GRI-Inc/poetry-jupyter-template.git
 ```
 
 ## Dockerのインストール
